@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c0ubt6vnx2v0v"]
+
+[ext_resource type="PackedScene" uid="uid://8doq2asyqqqr" path="res://Scenes/Rooms/bathroom-01.tscn" id="1_rp2qx"]
+[ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Scenes/Player/character_body_2d.tscn" id="2_kichk"]
+[ext_resource type="PackedScene" uid="uid://bfdahey37b52k" path="res://Scenes/Items/weapon.tscn" id="3_leais"]
+[ext_resource type="PackedScene" uid="uid://drik76h7wr316" path="res://Scenes/Items/coin.tscn" id="4_h6tlt"]
+[ext_resource type="PackedScene" uid="uid://cioq522pxy20o" path="res://Scenes/Items/item.tscn" id="5_l1jrj"]
+[ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Scenes/Enemies/EnemySpwan.tscn" id="6_4bqqs"]
+[ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Scenes/Enemies/EnemyCharacter.tscn" id="7_ynsuh"]
+
+[node name="Playground" type="Node2D" unique_id=1284767216]
+
+[node name="Bathroom01" parent="." unique_id=293350858 instance=ExtResource("1_rp2qx")]
+position = Vector2(46, 33)
+
+[node name="Timmy2" parent="." unique_id=2025980928 groups=["player"] instance=ExtResource("2_kichk")]
+position = Vector2(255, 193)
+
+[node name="weaponOnGround" parent="." unique_id=1149990523 instance=ExtResource("3_leais")]
+position = Vector2(114, 159)
+
+[node name="coin" parent="." unique_id=1608394325 instance=ExtResource("4_h6tlt")]
+position = Vector2(372, 128)
+
+[node name="Heart" parent="." unique_id=1042614056 instance=ExtResource("5_l1jrj")]
+position = Vector2(336, 206)
+
+[node name="EnemySpwan" parent="." unique_id=426365184 instance=ExtResource("6_4bqqs")]
+
+[node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=769613302 instance=ExtResource("7_ynsuh")]

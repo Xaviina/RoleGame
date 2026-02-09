@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b26cm85cimlx0"]
 
-[ext_resource type="Texture2D" uid="uid://40oxvc6k8vef" path="res://RabbitEnemy.png" id="1_d6you"]
-[ext_resource type="Script" uid="uid://bbttrk8ynvbjk" path="res://EnemyCharacter.cs" id="1_kbrm0"]
-[ext_resource type="Script" uid="uid://bj6krf7lfmtqt" path="res://EnemyHealth.cs" id="3_16xks"]
+[ext_resource type="Texture2D" uid="uid://40oxvc6k8vef" path="res://Assets/Enemies/RabbitEnemy.png" id="1_d6you"]
+[ext_resource type="Script" uid="uid://bbttrk8ynvbjk" path="res://Scripts/Enemies/EnemyCharacter.cs" id="1_kbrm0"]
+[ext_resource type="Script" uid="uid://bj6krf7lfmtqt" path="res://Scripts/Enemies/EnemyHealth.cs" id="3_16xks"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kbrm0"]
 radius = 42.047592
