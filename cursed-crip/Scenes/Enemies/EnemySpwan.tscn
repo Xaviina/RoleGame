@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dbe27qvemki55"]
+
+[ext_resource type="Script" uid="uid://c5d7j6ejgrb6v" path="res://Scripts/Enemies/EnemySpwan.cs" id="1_w870b"]
+[ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Scenes/Enemies/EnemyCharacter.tscn" id="2_o1d3h"]
+
+[node name="EnemySpwan" type="Node2D" unique_id=426365184]
+script = ExtResource("1_w870b")
+EnemyScene = ExtResource("2_o1d3h")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dxa7ed0j8q5o6"]
 
 [ext_resource type="Texture2D" uid="uid://cjctyihxmqmfu" path="res://Assets/GunsPack/Bullets/RifleAmmoBig.png" id="1_f8cdk"]
-[ext_resource type="Script" uid="uid://b2bs1fhwi6beb" path="res://Scenes/projectile.gd" id="1_yr2qt"]
+[ext_resource type="Script" uid="uid://b2bs1fhwi6beb" path="res://Scripts/Items/projectile.gd" id="1_yr2qt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yr2qt"]
 radius = 1.0
