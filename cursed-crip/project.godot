@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="Cursed Crip"
-config/features=PackedStringArray("4.6", "C#", "Forward Plus")
+run/main_scene="uid://b6oxwnpbvjqwa"
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
@@ -24,4 +25,5 @@ project/assembly_name="Cursed Crip"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
