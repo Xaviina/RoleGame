@@ -276,22 +276,20 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_it8n0"]
 radius = 16.0
-height = 80.0
+height = 120.0
 
 [node name="Timmy" type="CharacterBody2D" unique_id=2025980928]
 script = ExtResource("1_it8n0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1410593185]
-position = Vector2(1.5258789e-05, -67)
-scale = Vector2(0.85562503, 0.5747982)
+scale = Vector2(0.2, 0.215)
 sprite_frames = SubResource("SpriteFrames_nncp5")
 animation = &"stand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=691877844]
-position = Vector2(4, -42)
+scale = Vector2(0.35, 0.35)
 shape = SubResource("CapsuleShape2D_it8n0")
 
 [node name="Weapon" type="Node2D" parent="." unique_id=217219277]
-position = Vector2(4, -41)
 script = ExtResource("4_gbyq6")
 bullet_scene = ExtResource("5_pbq55")
