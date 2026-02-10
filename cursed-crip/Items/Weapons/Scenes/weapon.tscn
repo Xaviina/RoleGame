@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bfdahey37b52k"]
+
+[ext_resource type="Script" uid="uid://bribxmd4hpxdh" path="res://Items/Weapons/Scripts/weapon (2).gd" id="1_er6cq"]
+[ext_resource type="PackedScene" uid="uid://dxa7ed0j8q5o6" path="res://Items/Weapons/Scenes/projectile.tscn" id="2_e1ly8"]
+[ext_resource type="Texture2D" uid="uid://bwxara81jqdvs" path="res://Items/Weapons/Sprites/GunsPack/Guns/M15.png" id="2_qv81b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_er6cq"]
+radius = 7.0
+
+[node name="weaponOnGround" type="Area2D" unique_id=1149990523]
+script = ExtResource("1_er6cq")
+weapon_bullet_scene = ExtResource("2_e1ly8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=340540242]
+texture = ExtResource("2_qv81b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164833546]
+shape = SubResource("CircleShape2D_er6cq")
