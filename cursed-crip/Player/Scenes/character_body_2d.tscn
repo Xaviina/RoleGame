@@ -275,10 +275,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_it8n0"]
-radius = 16.0
-height = 120.0
+radius = 14.285717
+height = 28.571434
 
 [node name="Timmy" type="CharacterBody2D" unique_id=2025980928]
+collision_mask = 19
 script = ExtResource("1_it8n0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1410593185]
@@ -287,6 +288,7 @@ sprite_frames = SubResource("SpriteFrames_nncp5")
 animation = &"stand"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=691877844]
+position = Vector2(0.99999994, 19)
 scale = Vector2(0.35, 0.35)
 shape = SubResource("CapsuleShape2D_it8n0")
 

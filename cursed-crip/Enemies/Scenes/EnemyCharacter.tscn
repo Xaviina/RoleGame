@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bj6krf7lfmtqt" path="res://Enemies/Scripts/EnemyHealth.cs" id="3_16xks"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kbrm0"]
-radius = 42.047592
+radius = 13.0
 
 [sub_resource type="Animation" id="Animation_16xks"]
 resource_name = "Idle"
@@ -28,15 +28,17 @@ _data = {
 }
 
 [node name="EnemyRabbit2D" type="CharacterBody2D" unique_id=769613302]
+collision_layer = 2
+collision_mask = 19
 script = ExtResource("1_kbrm0")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1907423532]
 position = Vector2(2.000002, -5)
-scale = Vector2(0.07324219, 0.06903076)
+scale = Vector2(0.05, 0.047)
 texture = ExtResource("1_d6you")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2132086014]
-position = Vector2(0, -6)
+position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_kbrm0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2004007579]

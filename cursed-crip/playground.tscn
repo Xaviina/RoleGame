@@ -29,3 +29,4 @@ position = Vector2(336, 206)
 [node name="EnemySpwan" parent="." unique_id=426365184 instance=ExtResource("6_4bqqs")]
 
 [node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=769613302 instance=ExtResource("7_ynsuh")]
+position = Vector2(206, 134)
