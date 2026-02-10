@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://deqkrogiji4t0"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1781994532]
+
+[node name="Control" type="Control" parent="." unique_id=370170631]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthBar" type="TextureProgressBar" parent="Control" unique_id=1440402638]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1970980863]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
