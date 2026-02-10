@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Cursed Crip"
-run/main_scene="uid://cmfm3dq7fpkcw"
+run/main_scene="uid://duqef2uby5gsm"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 
