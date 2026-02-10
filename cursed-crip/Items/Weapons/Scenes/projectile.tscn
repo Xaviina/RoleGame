@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dxa7ed0j8q5o6"]
+
+[ext_resource type="Texture2D" uid="uid://cjctyihxmqmfu" path="res://Items/Weapons/Sprites/GunsPack/Bullets/RifleAmmoBig.png" id="1_f8cdk"]
+[ext_resource type="Script" uid="uid://b2bs1fhwi6beb" path="res://Items/Scripts/projectile.gd" id="1_yr2qt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yr2qt"]
+radius = 1.0
+
+[node name="Projectile" type="Area2D" unique_id=1864928532]
+script = ExtResource("1_yr2qt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=448834202]
+scale = Vector2(0.25, 0.3125)
+texture = ExtResource("1_f8cdk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1194957669]
+shape = SubResource("CircleShape2D_yr2qt")
