@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://8doq2asyqqqr" path="res://Level/Bathroom/bathroom-01.tscn" id="1_rp2qx"]
 [ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Player/Scenes/character_body_2d.tscn" id="2_kichk"]
 [ext_resource type="PackedScene" uid="uid://bfdahey37b52k" path="res://Items/Weapons/Scenes/weapon.tscn" id="3_leais"]
-[ext_resource type="PackedScene" uid="uid://drik76h7wr316" path="res://Items/Scenes/coin.tscn" id="4_h6tlt"]
 [ext_resource type="PackedScene" uid="uid://cioq522pxy20o" path="res://Items/Scenes/item.tscn" id="5_l1jrj"]
 [ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Enemies/Scenes/EnemySpwan.tscn" id="6_4bqqs"]
 [ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
+[ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Level/Darkness.tscn" id="8_v7dth"]
 
 [node name="Playground" type="Node2D" unique_id=1284767216]
 position = Vector2(2, -3)
@@ -15,13 +15,10 @@ position = Vector2(2, -3)
 position = Vector2(46, 33)
 
 [node name="Timmy2" parent="." unique_id=2025980928 groups=["player"] instance=ExtResource("2_kichk")]
-position = Vector2(255, 193)
+position = Vector2(406, 249)
 
 [node name="weaponOnGround" parent="." unique_id=1149990523 instance=ExtResource("3_leais")]
 position = Vector2(114, 159)
-
-[node name="coin" parent="." unique_id=1608394325 instance=ExtResource("4_h6tlt")]
-position = Vector2(372, 128)
 
 [node name="Heart" parent="." unique_id=1042614056 instance=ExtResource("5_l1jrj")]
 position = Vector2(336, 206)
@@ -30,3 +27,5 @@ position = Vector2(336, 206)
 
 [node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=769613302 instance=ExtResource("7_ynsuh")]
 position = Vector2(206, 134)
+
+[node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("8_v7dth")]
