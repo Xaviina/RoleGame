@@ -1,18 +1,21 @@
 [gd_scene format=3 uid="uid://bfdahey37b52k"]
 
-[ext_resource type="Script" uid="uid://bribxmd4hpxdh" path="res://weapon.gd" id="1_er6cq"]
-[ext_resource type="PackedScene" uid="uid://dxa7ed0j8q5o6" path="res://Scenes/projectile.tscn" id="2_e1ly8"]
-[ext_resource type="Texture2D" uid="uid://bwxara81jqdvs" path="res://Assets/GunsPack/Guns/M15.png" id="2_qv81b"]
+[ext_resource type="Script" uid="uid://bribxmd4hpxdh" path="res://slingshot.gd" id="1_er6cq"]
+[ext_resource type="PackedScene" uid="uid://dxa7ed0j8q5o6" path="res://Scenes/rock.tscn" id="2_e1ly8"]
+[ext_resource type="Texture2D" uid="uid://cfol23mrmpbvm" path="res://Assets/Bild.png" id="3_e1ly8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_er6cq"]
-radius = 7.0
+radius = 5.0
 
-[node name="weaponOnGround" type="Area2D" unique_id=1149990523]
+[node name="slingshot" type="Area2D" unique_id=1149990523]
 script = ExtResource("1_er6cq")
 weapon_bullet_scene = ExtResource("2_e1ly8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=340540242]
-texture = ExtResource("2_qv81b")
+position = Vector2(-0.06, -0.06)
+scale = Vector2(0.009882812, 0.009882812)
+texture = ExtResource("3_e1ly8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164833546]
+scale = Vector2(0.6, 0.6)
 shape = SubResource("CircleShape2D_er6cq")

@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://cbicsj1m3cqe"]
-
-[ext_resource type="Script" uid="uid://df3d2wvx6fnun" path="res://pickable_item.gd" id="1_fe0dt"]
-
-[node name="pickableObject" type="Area2D" unique_id=1600945268]
-script = ExtResource("1_fe0dt")

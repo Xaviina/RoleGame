@@ -1,19 +1,68 @@
 [gd_scene format=3 uid="uid://deqkrogiji4t0"]
 
+[ext_resource type="Script" uid="uid://dwq6q8xsk6lq" path="res://Scenes/heart_container.gd" id="1_bjfho"]
+[ext_resource type="Texture2D" uid="uid://cvoe44k6cbuy7" path="res://Assets/heart pixel art/heart pixel art 32x32.png" id="2_6fbih"]
+[ext_resource type="Texture2D" uid="uid://bmv5bpku1kfi2" path="res://Assets/heart pixel art/heart pixel art 16x16.png" id="3_t1xeu"]
+[ext_resource type="Texture2D" uid="uid://c5ob35lvgwcj1" path="res://Assets/01coin.png" id="4_6fbih"]
+[ext_resource type="FontFile" uid="uid://bxgard6uxguxv" path="res://Assets/pixel-game/Pixel Game.otf" id="5_36asn"]
+[ext_resource type="Texture2D" uid="uid://d0blinbada8dd" path="res://Assets/Bild (1).png" id="5_t1xeu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1xeu"]
+atlas = ExtResource("4_6fbih")
+region = Rect2(0, 0, 120.666626, 120)
+
 [node name="HUD" type="CanvasLayer" unique_id=1781994532]
 
-[node name="Control" type="Control" parent="." unique_id=370170631]
-layout_mode = 3
-anchors_preset = 0
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1208133604]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HealthBar" type="TextureProgressBar" parent="Control" unique_id=1440402638]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="HeartContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=279923386]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("1_bjfho")
+heart_texture = ExtResource("2_6fbih")
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1970980863]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HeartContainer" unique_id=1034363690]
+clip_contents = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("3_t1xeu")
+expand_mode = 1
+
+[node name="CoinRow" type="HBoxContainer" parent="VBoxContainer" unique_id=1621751686]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CoinRow" unique_id=1854410718]
+texture_filter = 1
+clip_contents = true
+custom_minimum_size = Vector2(54, 54)
+layout_mode = 2
+texture = SubResource("AtlasTexture_t1xeu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/CoinRow" unique_id=1084911873]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_36asn")
+theme_override_font_sizes/font_size = 53
+text = "001"
+
+[node name="SplitterRow" type="HBoxContainer" parent="VBoxContainer" unique_id=1911240546]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/SplitterRow" unique_id=1475732920]
+clip_contents = true
+custom_minimum_size = Vector2(54, 54)
+layout_mode = 2
+texture = ExtResource("5_t1xeu")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/SplitterRow" unique_id=414628460]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("5_36asn")
+theme_override_font_sizes/font_size = 53
+text = "001"

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cbkbccnvkhsl1"]
+
+[ext_resource type="Script" uid="uid://bvcwuf7hfpjhh" path="res://area_2d.gd" id="1_kptw4"]
+[ext_resource type="Texture2D" uid="uid://d0blinbada8dd" path="res://Assets/Bild (1).png" id="2_t54td"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t54td"]
+radius = 3.1622777
+
+[node name="ProjectileSplitter" type="Area2D" unique_id=1324754271]
+script = ExtResource("1_kptw4")
+item_name = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=85738995]
+shape = SubResource("CircleShape2D_t54td")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=2029177337]
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_t54td")

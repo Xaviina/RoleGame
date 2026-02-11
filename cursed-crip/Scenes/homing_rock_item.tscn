@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cany7766a6sje"]
+
+[ext_resource type="Script" uid="uid://cpgndqgd0av3i" path="res://Scenes/homing_rock_item.gd" id="1_bdhx7"]
+[ext_resource type="Texture2D" uid="uid://4mfw6w21s6k1" path="res://Assets/Magnet.png" id="1_y5q8d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bdhx7"]
+radius = 7.071068
+
+[node name="HomingRockItem" type="Area2D" unique_id=1000453690]
+script = ExtResource("1_bdhx7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=210068182]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_y5q8d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2039339054]
+shape = SubResource("CircleShape2D_bdhx7")

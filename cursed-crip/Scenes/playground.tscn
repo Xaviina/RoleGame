@@ -1,18 +1,26 @@
 [gd_scene format=3 uid="uid://b6oxwnpbvjqwa"]
 
-[ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Scenes/character_body_2d.tscn" id="1_uof5o"]
+[ext_resource type="Script" uid="uid://nf6w2dv2stqm" path="res://Scenes/playground.gd" id="1_opmy1"]
+[ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Scenes/player.tscn" id="1_uof5o"]
 [ext_resource type="PackedScene" uid="uid://bfdahey37b52k" path="res://Scenes/weapon.tscn" id="2_u4ce8"]
-[ext_resource type="PackedScene" uid="uid://cioq522pxy20o" path="res://Scenes/item.tscn" id="3_qyfof"]
+[ext_resource type="PackedScene" uid="uid://cioq522pxy20o" path="res://Scenes/heart.tscn" id="3_qyfof"]
 [ext_resource type="PackedScene" uid="uid://drik76h7wr316" path="res://Scenes/coin.tscn" id="4_3e07v"]
 [ext_resource type="PackedScene" uid="uid://deqkrogiji4t0" path="res://Scenes/hud.tscn" id="5_vl51c"]
+[ext_resource type="PackedScene" uid="uid://cbkbccnvkhsl1" path="res://Scenes/projectile_splitter.tscn" id="6_vl51c"]
+[ext_resource type="PackedScene" uid="uid://cany7766a6sje" path="res://Scenes/homing_rock_item.tscn" id="8_wqftc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uof5o"]
 normal = Vector2(-0.0022471852, -0.99999744)
 distance = -399.9855
 
-[node name="Playground" type="Node2D" unique_id=1245275473]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_opmy1"]
+normal = Vector2(-0.99970275, 0.024382994)
+distance = 12.033984
 
-[node name="Timmy" parent="." unique_id=2025980928 instance=ExtResource("1_uof5o")]
+[node name="Playground" type="Node2D" unique_id=1245275473]
+script = ExtResource("1_opmy1")
+
+[node name="Player" parent="." unique_id=2025980928 instance=ExtResource("1_uof5o")]
 position = Vector2(16, -25)
 scale = Vector2(0.1, 0.1)
 
@@ -37,3 +45,36 @@ position = Vector2(70, -26)
 position = Vector2(-17, -24)
 
 [node name="HUD" parent="." unique_id=1781994532 instance=ExtResource("5_vl51c")]
+
+[node name="ProjectileSplitter" parent="." unique_id=1324754271 instance=ExtResource("6_vl51c")]
+position = Vector2(54, -23)
+
+[node name="ProjectileSplitter2" parent="." unique_id=766882164 instance=ExtResource("6_vl51c")]
+position = Vector2(42, -23)
+
+[node name="ProjectileSplitter3" parent="." unique_id=1007368022 instance=ExtResource("6_vl51c")]
+position = Vector2(32, -24)
+
+[node name="ProjectileSplitter4" parent="." unique_id=1281404650 instance=ExtResource("6_vl51c")]
+position = Vector2(61, -23)
+
+[node name="Heart" parent="." unique_id=696065654 instance=ExtResource("3_qyfof")]
+position = Vector2(-44, -25)
+
+[node name="Heart2" parent="." unique_id=365349224 instance=ExtResource("3_qyfof")]
+position = Vector2(-35, -24)
+
+[node name="Heart3" parent="." unique_id=1482658325 instance=ExtResource("3_qyfof")]
+position = Vector2(-55, -26)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=939956439]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=519734865]
+position = Vector2(118, -23)
+shape = SubResource("WorldBoundaryShape2D_opmy1")
+
+[node name="HomingRockItem" parent="StaticBody2D2" unique_id=1000453690 instance=ExtResource("8_wqftc")]
+position = Vector2(-8, -30)
+
+[editable path="Player"]
+[editable path="HUD"]

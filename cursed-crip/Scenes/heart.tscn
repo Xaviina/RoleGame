@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cioq522pxy20o"]
 
-[ext_resource type="Script" uid="uid://cjdhk20m73rpr" path="res://item.gd" id="1_ys0gr"]
+[ext_resource type="Script" uid="uid://cjdhk20m73rpr" path="res://heart.gd" id="1_ys0gr"]
 [ext_resource type="Texture2D" uid="uid://ciu1ybejwvyn2" path="res://Assets/animation-pack/rotating-smoothly.png" id="2_76mu4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ys0gr"]
