@@ -27,5 +27,14 @@ position = Vector2(336, 206)
 
 [node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=769613302 instance=ExtResource("7_ynsuh")]
 position = Vector2(206, 134)
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
 
 [node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("8_v7dth")]
+color = Color(0.013313601, 0.017181924, 0.033644296, 1)
+>>>>>>> Stashed changes
+=======
+
+[node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("8_v7dth")]
+>>>>>>> 13d60c2ff4af27fadf202757b6abd4c186ce4c4e

@@ -305,7 +305,18 @@ shape = SubResource("CapsuleShape2D_it8n0")
 [node name="Weapon" type="Node2D" parent="." unique_id=217219277]
 script = ExtResource("4_gbyq6")
 bullet_scene = ExtResource("5_pbq55")
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1738673163]
+color = Color(1, 1, 0.45490196, 1)
+texture = SubResource("GradientTexture2D_cu2m4")
+texture_scale = 3.0
+>>>>>>> Stashed changes
+=======
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1738673163]
 texture = SubResource("GradientTexture2D_cu2m4")
 texture_scale = 3.0
+>>>>>>> 13d60c2ff4af27fadf202757b6abd4c186ce4c4e
