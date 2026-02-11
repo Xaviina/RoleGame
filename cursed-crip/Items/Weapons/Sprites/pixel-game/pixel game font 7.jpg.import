@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfxwr8jjs451f"
-path="res://.godot/imported/pixel game font 7.jpg-48d3e0c0583a8ac6675c98fef68f9d7b.ctex"
+path="res://.godot/imported/pixel game font 7.jpg-201eb9fa09be332c7dbf57e17fece622.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pixel-game/pixel game font 7.jpg"
-dest_files=["res://.godot/imported/pixel game font 7.jpg-48d3e0c0583a8ac6675c98fef68f9d7b.ctex"]
+source_file="res://Items/Weapons/Sprites/pixel-game/pixel game font 7.jpg"
+dest_files=["res://.godot/imported/pixel game font 7.jpg-201eb9fa09be332c7dbf57e17fece622.ctex"]
 
 [params]
 

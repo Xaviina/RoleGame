@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dccacsfd6r2ix"
-path="res://.godot/imported/Pixel Game Extrude.otf-af19d921e0e846e5777488d7c53f19b5.fontdata"
+path="res://.godot/imported/Pixel Game Extrude.otf-897ac5085af8a57f85d61971e5b8378e.fontdata"
 
 [deps]
 
-source_file="res://Assets/pixel-game/Pixel Game Extrude.otf"
-dest_files=["res://.godot/imported/Pixel Game Extrude.otf-af19d921e0e846e5777488d7c53f19b5.fontdata"]
+source_file="res://Items/Weapons/Sprites/pixel-game/Pixel Game Extrude.otf"
+dest_files=["res://.godot/imported/Pixel Game Extrude.otf-897ac5085af8a57f85d61971e5b8378e.fontdata"]
 
 [params]
 
