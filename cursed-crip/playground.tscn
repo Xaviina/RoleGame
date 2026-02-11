@@ -1,15 +1,17 @@
 [gd_scene format=3 uid="uid://c0ubt6vnx2v0v"]
 
-[ext_resource type="Script" uid="uid://d2f75irfp8jmg" path="res://playground.gd" id="1_h1jm5"]
+[ext_resource type="Script" path="res://playground.gd" id="1_h1jm5"]
 [ext_resource type="PackedScene" uid="uid://8doq2asyqqqr" path="res://Level/Bathroom/bathroom-01.tscn" id="1_rp2qx"]
-[ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Player/Scenes/Player.tscn" id="2_kichk"]
 [ext_resource type="PackedScene" uid="uid://cq3skiqyudcha" path="res://Items/Scenes/heart.tscn" id="5_l1jrj"]
 [ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Enemies/Scenes/EnemySpwan.tscn" id="6_4bqqs"]
 [ext_resource type="PackedScene" uid="uid://bn3qiwctllft5" path="res://Items/Scenes/Slingshot.tscn" id="7_v7dth"]
 [ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
 [ext_resource type="PackedScene" uid="uid://c0lhqpc6n56tp" path="res://Items/Scenes/projectile_splitter.tscn" id="8_pi42a"]
-[ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Level/Darkness.tscn" id="8_v7dth"]
-[ext_resource type="PackedScene" uid="uid://q4v545sewp2d" path="res://UI/Scenes/HUD.tscn" id="9_pi42a"]
+[ext_resource type="PackedScene" path="res://Level/Darkness.tscn" id="8_v7dth"]
+[ext_resource type="PackedScene" uid="uid://deqkrogiji4t0" path="res://UI/Scenes/HUD.tscn" id="9_pi42a"]
+[ext_resource type="PackedScene" uid="uid://vvj8fjn8s11s" path="res://Player/Scenes/Player.tscn" id="10_h1jm5"]
+[ext_resource type="PackedScene" uid="uid://bu0xyo5hv8bje" path="res://Items/Scenes/rock.tscn" id="11_te8jg"]
+[ext_resource type="Script" path="res://Items/Scripts/projectile_splitter.gd" id="12_te8jg"]
 
 [node name="Playground" type="Node2D" unique_id=1305490607]
 position = Vector2(2, -3)
@@ -17,9 +19,6 @@ script = ExtResource("1_h1jm5")
 
 [node name="Bathroom01" parent="." unique_id=467761442 instance=ExtResource("1_rp2qx")]
 position = Vector2(46, 33)
-
-[node name="Timmy2" parent="." unique_id=144364991 groups=["player"] instance=ExtResource("2_kichk")]
-position = Vector2(406, 249)
 
 [node name="Heart" parent="." unique_id=1586926512 instance=ExtResource("5_l1jrj")]
 position = Vector2(336, 206)
@@ -39,3 +38,10 @@ position = Vector2(391, 185)
 position = Vector2(427, 215)
 
 [node name="HUD" parent="." unique_id=821862012 instance=ExtResource("9_pi42a")]
+
+[node name="Player" parent="." unique_id=841666979 groups=["player"] instance=ExtResource("10_h1jm5")]
+position = Vector2(403, 249)
+
+[node name="Rock" parent="." unique_id=2045297379 instance=ExtResource("11_te8jg")]
+script = ExtResource("12_te8jg")
+item_name = "Projectile Splitter"
