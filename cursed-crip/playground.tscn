@@ -1,32 +1,41 @@
 [gd_scene format=3 uid="uid://c0ubt6vnx2v0v"]
 
+[ext_resource type="Script" uid="uid://d2f75irfp8jmg" path="res://playground.gd" id="1_h1jm5"]
 [ext_resource type="PackedScene" uid="uid://8doq2asyqqqr" path="res://Level/Bathroom/bathroom-01.tscn" id="1_rp2qx"]
-[ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Player/Scenes/character_body_2d.tscn" id="2_kichk"]
-[ext_resource type="PackedScene" uid="uid://bfdahey37b52k" path="res://Items/Weapons/Scenes/weapon.tscn" id="3_leais"]
-[ext_resource type="PackedScene" uid="uid://cioq522pxy20o" path="res://Items/Scenes/item.tscn" id="5_l1jrj"]
+[ext_resource type="PackedScene" uid="uid://gn318tjf1jm0" path="res://Player/Scenes/Player.tscn" id="2_kichk"]
+[ext_resource type="PackedScene" uid="uid://cq3skiqyudcha" path="res://Items/Scenes/heart.tscn" id="5_l1jrj"]
 [ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Enemies/Scenes/EnemySpwan.tscn" id="6_4bqqs"]
+[ext_resource type="PackedScene" uid="uid://bn3qiwctllft5" path="res://Items/Scenes/Slingshot.tscn" id="7_v7dth"]
 [ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
-[ext_resource type="PackedScene" path="res://Level/Darkness.tscn" id="8_v7dth"]
+[ext_resource type="PackedScene" uid="uid://c0lhqpc6n56tp" path="res://Items/Scenes/projectile_splitter.tscn" id="8_pi42a"]
+[ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Level/Darkness.tscn" id="8_v7dth"]
+[ext_resource type="PackedScene" uid="uid://q4v545sewp2d" path="res://UI/Scenes/HUD.tscn" id="9_pi42a"]
 
-[node name="Playground" type="Node2D"]
+[node name="Playground" type="Node2D" unique_id=1305490607]
 position = Vector2(2, -3)
+script = ExtResource("1_h1jm5")
 
-[node name="Bathroom01" parent="." instance=ExtResource("1_rp2qx")]
+[node name="Bathroom01" parent="." unique_id=467761442 instance=ExtResource("1_rp2qx")]
 position = Vector2(46, 33)
 
-[node name="Timmy2" parent="." groups=["player"] instance=ExtResource("2_kichk")]
+[node name="Timmy2" parent="." unique_id=144364991 groups=["player"] instance=ExtResource("2_kichk")]
 position = Vector2(406, 249)
 
-[node name="weaponOnGround" parent="." instance=ExtResource("3_leais")]
-position = Vector2(114, 159)
-
-[node name="Heart" parent="." instance=ExtResource("5_l1jrj")]
+[node name="Heart" parent="." unique_id=1586926512 instance=ExtResource("5_l1jrj")]
 position = Vector2(336, 206)
 
-[node name="EnemySpwan" parent="." instance=ExtResource("6_4bqqs")]
+[node name="EnemySpwan" parent="." unique_id=636385555 instance=ExtResource("6_4bqqs")]
 
-[node name="EnemyRabbit2D" parent="EnemySpwan" instance=ExtResource("7_ynsuh")]
+[node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=1740170513 instance=ExtResource("7_ynsuh")]
 position = Vector2(206, 134)
 
-[node name="Darkness" parent="." instance=ExtResource("8_v7dth")]
+[node name="Darkness" parent="." unique_id=1064633370 instance=ExtResource("8_v7dth")]
 color = Color(0.013313601, 0.017181924, 0.033644296, 1)
+
+[node name="Area2D" parent="." unique_id=1226093021 instance=ExtResource("7_v7dth")]
+position = Vector2(391, 185)
+
+[node name="Projectile Splitter" parent="." unique_id=1246748690 instance=ExtResource("8_pi42a")]
+position = Vector2(427, 215)
+
+[node name="HUD" parent="." unique_id=821862012 instance=ExtResource("9_pi42a")]

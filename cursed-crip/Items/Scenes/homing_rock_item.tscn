@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://y3tb02ebvcle"]
+
+[ext_resource type="Script" uid="uid://bfxejwmd0u53v" path="res://Items/Scripts/homing_rock_item.gd" id="1_mrlwn"]
+
+[node name="HomingRockItem" type="Area2D" unique_id=1481757751]
+script = ExtResource("1_mrlwn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=335885754]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442614698]
