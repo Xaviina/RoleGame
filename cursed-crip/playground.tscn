@@ -6,35 +6,27 @@
 [ext_resource type="PackedScene" uid="uid://cioq522pxy20o" path="res://Items/Scenes/item.tscn" id="5_l1jrj"]
 [ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Enemies/Scenes/EnemySpwan.tscn" id="6_4bqqs"]
 [ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
-[ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Level/Darkness.tscn" id="8_v7dth"]
+[ext_resource type="PackedScene" path="res://Level/Darkness.tscn" id="8_v7dth"]
 
-[node name="Playground" type="Node2D" unique_id=1284767216]
+[node name="Playground" type="Node2D"]
 position = Vector2(2, -3)
 
-[node name="Bathroom01" parent="." unique_id=293350858 instance=ExtResource("1_rp2qx")]
+[node name="Bathroom01" parent="." instance=ExtResource("1_rp2qx")]
 position = Vector2(46, 33)
 
-[node name="Timmy2" parent="." unique_id=2025980928 groups=["player"] instance=ExtResource("2_kichk")]
+[node name="Timmy2" parent="." groups=["player"] instance=ExtResource("2_kichk")]
 position = Vector2(406, 249)
 
-[node name="weaponOnGround" parent="." unique_id=1149990523 instance=ExtResource("3_leais")]
+[node name="weaponOnGround" parent="." instance=ExtResource("3_leais")]
 position = Vector2(114, 159)
 
-[node name="Heart" parent="." unique_id=1042614056 instance=ExtResource("5_l1jrj")]
+[node name="Heart" parent="." instance=ExtResource("5_l1jrj")]
 position = Vector2(336, 206)
 
-[node name="EnemySpwan" parent="." unique_id=426365184 instance=ExtResource("6_4bqqs")]
+[node name="EnemySpwan" parent="." instance=ExtResource("6_4bqqs")]
 
-[node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=769613302 instance=ExtResource("7_ynsuh")]
+[node name="EnemyRabbit2D" parent="EnemySpwan" instance=ExtResource("7_ynsuh")]
 position = Vector2(206, 134)
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 
-[node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("8_v7dth")]
+[node name="Darkness" parent="." instance=ExtResource("8_v7dth")]
 color = Color(0.013313601, 0.017181924, 0.033644296, 1)
->>>>>>> Stashed changes
-=======
-
-[node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("8_v7dth")]
->>>>>>> 13d60c2ff4af27fadf202757b6abd4c186ce4c4e
