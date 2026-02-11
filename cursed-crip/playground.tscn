@@ -8,40 +8,40 @@
 [ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
 [ext_resource type="PackedScene" uid="uid://c0lhqpc6n56tp" path="res://Items/Scenes/projectile_splitter.tscn" id="8_pi42a"]
 [ext_resource type="PackedScene" path="res://Level/Darkness.tscn" id="8_v7dth"]
-[ext_resource type="PackedScene" uid="uid://deqkrogiji4t0" path="res://UI/Scenes/HUD.tscn" id="9_pi42a"]
+[ext_resource type="PackedScene" uid="uid://deqkrogiji4t0" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
 [ext_resource type="PackedScene" uid="uid://vvj8fjn8s11s" path="res://Player/Scenes/Player.tscn" id="10_h1jm5"]
-[ext_resource type="PackedScene" uid="uid://bu0xyo5hv8bje" path="res://Items/Scenes/rock.tscn" id="11_te8jg"]
-[ext_resource type="Script" path="res://Items/Scripts/projectile_splitter.gd" id="12_te8jg"]
 
 [node name="Playground" type="Node2D" unique_id=1305490607]
 position = Vector2(2, -3)
 script = ExtResource("1_h1jm5")
 
 [node name="Bathroom01" parent="." unique_id=467761442 instance=ExtResource("1_rp2qx")]
-position = Vector2(46, 33)
+position = Vector2(190, 127)
+scale = Vector2(4, 4)
 
 [node name="Heart" parent="." unique_id=1586926512 instance=ExtResource("5_l1jrj")]
-position = Vector2(336, 206)
+position = Vector2(1015, 404)
+scale = Vector2(2, 2)
 
 [node name="EnemySpwan" parent="." unique_id=636385555 instance=ExtResource("6_4bqqs")]
 
 [node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=1740170513 instance=ExtResource("7_ynsuh")]
-position = Vector2(206, 134)
+position = Vector2(307, 449)
 
 [node name="Darkness" parent="." unique_id=1064633370 instance=ExtResource("8_v7dth")]
 color = Color(0.013313601, 0.017181924, 0.033644296, 1)
 
-[node name="Area2D" parent="." unique_id=1226093021 instance=ExtResource("7_v7dth")]
-position = Vector2(391, 185)
-
 [node name="Projectile Splitter" parent="." unique_id=1246748690 instance=ExtResource("8_pi42a")]
-position = Vector2(427, 215)
+position = Vector2(1548, 555)
+scale = Vector2(4, 4)
 
 [node name="HUD" parent="." unique_id=821862012 instance=ExtResource("9_pi42a")]
 
 [node name="Player" parent="." unique_id=841666979 groups=["player"] instance=ExtResource("10_h1jm5")]
-position = Vector2(403, 249)
+position = Vector2(1651, 964)
+scale = Vector2(3.5, 3.5)
+collision_mask = 18
 
-[node name="Rock" parent="." unique_id=2045297379 instance=ExtResource("11_te8jg")]
-script = ExtResource("12_te8jg")
-item_name = "Projectile Splitter"
+[node name="Slingshot" parent="." unique_id=1226093021 instance=ExtResource("7_v7dth")]
+position = Vector2(1258, 739)
+scale = Vector2(3, 3)

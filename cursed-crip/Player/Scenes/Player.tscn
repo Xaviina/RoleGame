@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://vvj8fjn8s11s"]
 
-[ext_resource type="Script" path="res://Player/Scrips/Player.gd" id="1_7jgbj"]
+[ext_resource type="Script" uid="uid://bx7h7tocqyybm" path="res://Player/Scrips/Player.gd" id="1_7jgbj"]
 [ext_resource type="Texture2D" uid="uid://d12vao0kvnucv" path="res://Player/Sprites/run-to-the-right.png" id="2_ejah4"]
 [ext_resource type="Texture2D" uid="uid://cl6cyd0bn88my" path="res://Player/Sprites/smaller_Timmy_idle.png" id="3_wyx6f"]
 [ext_resource type="Script" path="res://Player/Scrips/weaponNodeonPlayer.gd" id="4_7jgbj"]
@@ -275,8 +275,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_it8n0"]
-radius = 14.285717
-height = 28.571434
+radius = 22.85714
+height = 45.71428
 
 [sub_resource type="Gradient" id="Gradient_c2xw3"]
 offsets = PackedFloat32Array(0, 0.33555555, 0.98)
@@ -299,7 +299,7 @@ animation = &"run_left_to_right"
 frame_progress = 0.6400763
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1102952585]
-position = Vector2(0.99999994, 19)
+position = Vector2(-4, 21)
 scale = Vector2(0.35, 0.35)
 shape = SubResource("CapsuleShape2D_it8n0")
 
