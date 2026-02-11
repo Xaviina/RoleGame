@@ -24,6 +24,11 @@ window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [dotnet]
 
 project/assembly_name="Cursed Crip"
@@ -68,8 +73,7 @@ shoot={
 
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Enemies"
-2d_physics/layer_4="Furniture"
-2d_physics/layer_5="Walls"
+2d_physics/layer_5="Walls/"
 
 [physics]
 

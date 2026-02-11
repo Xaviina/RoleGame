@@ -278,6 +278,16 @@ animations = [{
 radius = 14.285717
 height = 28.571434
 
+[sub_resource type="Gradient" id="Gradient_c2xw3"]
+offsets = PackedFloat32Array(0, 0.33555555, 0.98)
+colors = PackedColorArray(0.9447853, 0.9447853, 0.9447853, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cu2m4"]
+gradient = SubResource("Gradient_c2xw3")
+fill = 1
+fill_from = Vector2(0.50085473, 0.50085473)
+fill_to = Vector2(0.85641026, 0.14188035)
+
 [node name="Timmy" type="CharacterBody2D" unique_id=2025980928]
 collision_mask = 19
 script = ExtResource("1_it8n0")
@@ -295,6 +305,7 @@ shape = SubResource("CapsuleShape2D_it8n0")
 [node name="Weapon" type="Node2D" parent="." unique_id=217219277]
 script = ExtResource("4_gbyq6")
 bullet_scene = ExtResource("5_pbq55")
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
@@ -303,3 +314,9 @@ color = Color(1, 1, 0.45490196, 1)
 texture = SubResource("GradientTexture2D_cu2m4")
 texture_scale = 3.0
 >>>>>>> Stashed changes
+=======
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1738673163]
+texture = SubResource("GradientTexture2D_cu2m4")
+texture_scale = 3.0
+>>>>>>> 13d60c2ff4af27fadf202757b6abd4c186ce4c4e
