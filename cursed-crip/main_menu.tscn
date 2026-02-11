@@ -13,25 +13,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" parent="." unique_id=82746682 instance=ExtResource("1_7vrkn")]
+[node name="UI" type="Control" parent="." unique_id=668957133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="UI" unique_id=82746682 instance=ExtResource("1_7vrkn")]
 layout_mode = 1
 
-[node name="VBoxContainer" parent="." unique_id=1003473590 instance=ExtResource("1_glbon")]
+[node name="VBoxContainer" parent="UI" unique_id=1003473590 instance=ExtResource("1_glbon")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 offset_left = -275.0
-offset_top = -436.0
+offset_top = -360.0
 offset_right = 275.0
+offset_bottom = -36.0
 grow_vertical = 0
 
-[node name="TitleControl" type="Control" parent="." unique_id=1441746071]
+[node name="TitleControl" type="Control" parent="UI" unique_id=1441746071]
 anchors_preset = 0
 script = ExtResource("3_jix8l")
 
-[node name="CursedLabel" type="Label" parent="TitleControl" unique_id=1588445692]
+[node name="CursedLabel" type="Label" parent="UI/TitleControl" unique_id=1588445692]
 z_index = 2
 layout_mode = 0
 offset_left = 720.0
@@ -49,7 +58,7 @@ theme_override_fonts/font = ExtResource("4_jix8l")
 theme_override_font_sizes/font_size = 150
 text = "CURSED "
 
-[node name="CribLabel" type="Label" parent="TitleControl" unique_id=1296332734]
+[node name="CribLabel" type="Label" parent="UI/TitleControl" unique_id=1296332734]
 z_index = 1
 layout_mode = 0
 offset_left = 800.0
@@ -67,3 +76,13 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("4_jix8l")
 theme_override_font_sizes/font_size = 135
 text = "CRIB"
+
+[node name="Monsters" type="Node2D" parent="." unique_id=971458447]
+
+[node name="Bear" type="Sprite2D" parent="Monsters" unique_id=357294944]
+
+[node name="JackMonster" type="Sprite2D" parent="Monsters" unique_id=1626034531]
+
+[node name="Bunny" type="Sprite2D" parent="Monsters" unique_id=1171196220]
+
+[node name="Candle" type="Sprite2D" parent="Monsters" unique_id=1591036605]
