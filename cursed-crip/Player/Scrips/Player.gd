@@ -16,7 +16,7 @@ var health: int = 3:
 		health = value
 		health_changed.emit(health) # Shout out that health changed!
 
-const SPEED = 120.0  # Bewegungsgeschwindigkeit
+const SPEED = 300.0  # Bewegungsgeschwindigkeit
 
 func _physics_process(_delta: float) -> void:
 	get_input()
