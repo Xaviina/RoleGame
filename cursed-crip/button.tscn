@@ -5,20 +5,14 @@
 [ext_resource type="FontFile" uid="uid://dt6q0poa6qvvn" path="res://LuckiestGuy-Regular.ttf" id="3_vxja4"]
 
 [node name="VBoxContainer" type="VBoxContainer" unique_id=1003473590]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = -256.25
-offset_right = 320.0
-offset_bottom = 256.25
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_constants/separation = -10
+theme_override_constants/separation = -12
 alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=450794775]
@@ -87,7 +81,7 @@ grow_vertical = 2
 texture = ExtResource("2_vxja4")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Button2" unique_id=2047674143]
+[node name="TextureRect2" type="TextureRect" parent="Button2/TextureRect" unique_id=2047674143]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -135,7 +129,7 @@ grow_vertical = 2
 texture = ExtResource("2_vxja4")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Button3" unique_id=1358530703]
+[node name="TextureRect2" type="TextureRect" parent="Button3/TextureRect" unique_id=1358530703]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -183,7 +177,7 @@ grow_vertical = 2
 texture = ExtResource("2_vxja4")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Button4" unique_id=1510129495]
+[node name="TextureRect2" type="TextureRect" parent="Button4/TextureRect" unique_id=1510129495]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
