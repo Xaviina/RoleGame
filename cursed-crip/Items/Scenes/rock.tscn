@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bu0xyo5hv8bje"]
+
+[ext_resource type="Script" uid="uid://b2bs1fhwi6beb" path="res://Items/Scripts/rock.gd" id="1_h3686"]
+[ext_resource type="Texture2D" uid="uid://g2m468uyluj4" path="res://Items/Sprites/Bild (3).png" id="1_xb31q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xb31q"]
+
+[node name="Rock" type="Area2D" unique_id=2045297379]
+script = ExtResource("1_h3686")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1465978542]
+shape = SubResource("CircleShape2D_xb31q")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=235626867]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_xb31q")

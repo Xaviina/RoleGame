@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bn3qiwctllft5"]
+
+[ext_resource type="Script" uid="uid://wumnu3lwr8gn" path="res://Items/Scripts/Slingshot.gd" id="1_ouvrw"]
+[ext_resource type="Texture2D" uid="uid://dd6h2tojnx1lk" path="res://slingshot.png" id="2_jbgq0"]
+[ext_resource type="PackedScene" uid="uid://bu0xyo5hv8bje" path="res://Items/Scenes/rock.tscn" id="2_yiwjk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jbgq0"]
+radius = 11.0
+
+[node name="Slingshot" type="Area2D" unique_id=1226093021]
+script = ExtResource("1_ouvrw")
+weapon_bullet_scene = ExtResource("2_yiwjk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=812250491]
+position = Vector2(4, -1)
+shape = SubResource("CircleShape2D_jbgq0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=59551116]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_jbgq0")
