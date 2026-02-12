@@ -1,8 +1,9 @@
 extends HBoxContainer
 
-@export var heart_texture: Texture2D # Drag your heart image here in the Inspector
+@export var heart_texture: Texture2D 
 
 func update_health(current_health: int):
+	
 	# 1. Clear existing hearts
 	for child in get_children():
 		child.queue_free()
