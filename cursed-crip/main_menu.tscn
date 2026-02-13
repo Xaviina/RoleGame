@@ -4,6 +4,142 @@
 [ext_resource type="PackedScene" uid="uid://duqef2uby5gsm" path="res://button.tscn" id="1_glbon"]
 [ext_resource type="Script" uid="uid://wmu7tdaxx2ex" path="res://title_effect.gd" id="3_jix8l"]
 [ext_resource type="FontFile" uid="uid://c6eqe1y3q1v3e" path="res://Super Midnight.ttf" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://cenpi2nsapelh" path="res://UI/images/figuren/jackbox.png" id="5_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://dupmq7peglmfc" path="res://UI/images/figuren/Bear.png" id="6_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://1r4fcmv0vjgc" path="res://UI/images/figuren/Boy.png" id="7_0o4t1"]
+[ext_resource type="Texture2D" uid="uid://u4ps5lwjxcbq" path="res://UI/images/figuren/Bunny.png" id="8_0k4wn"]
+
+[sub_resource type="Animation" id="Animation_nlkkf"]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(507.75, 337.25003), Vector2(507.75, 325), Vector2(507.75, 337.25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.013962634]
+}
+
+[sub_resource type="Animation" id="Animation_qe12f"]
+resource_name = "junp_idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75, 1.5, 2.25, 3),
+"transitions": PackedFloat32Array(0.7, 0.7, 0.7, 0.7, 0.7),
+"update": 0,
+"values": [Vector2(507.75, 338), Vector2(507.75, 326), Vector2(507.75, 345), Vector2(507.75, 330), Vector2(507.75, 338)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75, 1.5, 2.25, 3),
+"transitions": PackedFloat32Array(0.7, 0.7, 0.7, 0.7),
+"update": 0,
+"values": [-0.05235987755982989, 0.03490658503988659, 0.05235987755982989, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8qtwp"]
+_data = {
+&"RESET": SubResource("Animation_nlkkf"),
+&"junp_idle": SubResource("Animation_qe12f")
+}
+
+[sub_resource type="Animation" id="Animation_8qtwp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(383.99997, 536.244)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dy7ct"]
+resource_name = "breath_idle"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(383.99997, 536.244), Vector2(383, 538), Vector2(384, 540), Vector2(383, 538), Vector2(383.99997, 536.244)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.010471975511966373, 0.0, 0.010471975511966373, 0.0038992006]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0o4t1"]
+_data = {
+&"RESET": SubResource("Animation_8qtwp"),
+&"breath_idle": SubResource("Animation_dy7ct")
+}
+
+[sub_resource type="Animation" id="Animation_0k4wn"]
+resource_name = "idle_hase"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5v2v"]
+_data = {
+&"idle_hase": SubResource("Animation_0k4wn")
+}
 
 [node name="MainMenu" type="Control" unique_id=350798054]
 layout_mode = 3
@@ -41,7 +177,7 @@ anchors_preset = 0
 script = ExtResource("3_jix8l")
 
 [node name="CursedLabel" type="Label" parent="UI/TitleControl" unique_id=1588445692]
-z_index = 2
+z_index = 5
 layout_mode = 0
 offset_left = 720.0
 offset_top = 25.0
@@ -59,7 +195,7 @@ theme_override_font_sizes/font_size = 150
 text = "CURSED "
 
 [node name="CribLabel" type="Label" parent="UI/TitleControl" unique_id=1296332734]
-z_index = 1
+z_index = 6
 layout_mode = 0
 offset_left = 800.0
 offset_top = 150.0
@@ -79,10 +215,39 @@ text = "CRIB"
 
 [node name="Monsters" type="Node2D" parent="." unique_id=971458447]
 
-[node name="Bear" type="Sprite2D" parent="Monsters" unique_id=357294944]
-
 [node name="JackMonster" type="Sprite2D" parent="Monsters" unique_id=1626034531]
+z_index = 1
+position = Vector2(507.75, 337.25003)
+rotation = -0.013962634
+scale = Vector2(0.93, 0.72)
+texture = ExtResource("5_8qtwp")
 
-[node name="Bunny" type="Sprite2D" parent="Monsters" unique_id=1171196220]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monsters/JackMonster" unique_id=1032263623]
+libraries/ = SubResource("AnimationLibrary_8qtwp")
+autoplay = &"junp_idle"
 
 [node name="Candle" type="Sprite2D" parent="Monsters" unique_id=1591036605]
+
+[node name="Bear" type="Sprite2D" parent="Monsters" unique_id=1161438140]
+z_index = 2
+position = Vector2(383.99997, 536.244)
+scale = Vector2(0.99813825, 0.88313824)
+texture = ExtResource("6_dy7ct")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monsters/Bear" unique_id=431577130]
+libraries/ = SubResource("AnimationLibrary_0o4t1")
+
+[node name="Boy" type="Sprite2D" parent="Monsters" unique_id=1198047573]
+z_index = 3
+position = Vector2(957, 536.53125)
+scale = Vector2(0.99271643, 0.6786499)
+texture = ExtResource("7_0o4t1")
+
+[node name="Bunny" type="Sprite2D" parent="Monsters" unique_id=339440372]
+z_index = 2
+position = Vector2(1373, 353.625)
+scale = Vector2(1.0104167, 0.9562988)
+texture = ExtResource("8_0k4wn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monsters/Bunny" unique_id=167965397]
+libraries/ = SubResource("AnimationLibrary_j5v2v")
