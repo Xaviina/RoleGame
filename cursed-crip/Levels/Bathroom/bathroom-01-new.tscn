@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://phvvarw0w3ah"]
+
+[ext_resource type="PackedScene" uid="uid://b13nnxce3vmyw" path="res://Levels/TileSets.tscn" id="1_2mmhb"]
+[ext_resource type="Script" uid="uid://dchutr6mq6j18" path="res://Levels/Scripts/player_spawn.gd" id="1_exxxq"]
+[ext_resource type="PackedScene" uid="uid://8doq2asyqqqr" path="res://Levels/Bathroom/bathroom-01-old.tscn" id="2_je2xm"]
+[ext_resource type="Shader" uid="uid://cpb3p8ko35rqb" path="res://Levels/Crib/crib-01.gdshader" id="3_exxxq"]
+[ext_resource type="PackedScene" uid="uid://3b5gcany1a22" path="res://Levels/PlayerSpawn.tscn" id="4_y46rl"]
+[ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Levels/Darkness.tscn" id="5_je2xm"]
+[ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Enemies/Scenes/EnemySpwan.tscn" id="7_y46rl"]
+[ext_resource type="PackedScene" uid="uid://d272aanbvqtpd" path="res://Levels/level_transition.tscn" id="8_t26mh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rndl1"]
+shader = ExtResource("3_exxxq")
+
+[node name="Bathroom01" type="Node2D" unique_id=479394018]
+script = ExtResource("1_exxxq")
+
+[node name="TileSets" parent="." unique_id=1881788443 instance=ExtResource("1_2mmhb")]
+
+[node name="Bathroom01-floor_walls" parent="TileSets" unique_id=293350858 instance=ExtResource("2_je2xm")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1429923127]
+z_index = 10
+material = SubResource("ShaderMaterial_rndl1")
+offset_left = 1536.0
+offset_top = 1043.0
+offset_right = 1729.0
+offset_bottom = 1086.4379
+color = Color(0, 0, 0, 1)
+
+[node name="PlayerSpawn" parent="." unique_id=1617155080 instance=ExtResource("4_y46rl")]
+position = Vector2(1609, 941)
+
+[node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("5_je2xm")]
+visible = false
+
+[node name="EnemySpwan" parent="." unique_id=426365184 instance=ExtResource("7_y46rl")]
+
+[node name="LevelTransition" parent="." unique_id=2019880764 instance=ExtResource("8_t26mh")]
+position = Vector2(1631, 1077)
+scale = Vector2(1.1256362, 0.4428756)
+level = "<null>"
+side = 3

@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<Updatedupstreamrun/main_scene="uid://b6oxwnpbvjqwa"
 
+[autoload]
+
+LevelManager="*uid://caknwtpkcl21m"
+PlayerManager="*uid://bp18m8fkpbdky"
+
 [display]
 
 window/size/viewport_width=1920
