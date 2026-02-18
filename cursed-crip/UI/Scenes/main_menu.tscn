@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cmfm3dq7fpkcw"]
 
-[ext_resource type="Texture2D" uid="uid://clupxb7xnmiuy" path="res://main_menu_backround_v5.png" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://c62d8ji6h2evs" path="res://main_menu_wood_top_v2.png" id="2_fu7sn"]
-[ext_resource type="Texture2D" uid="uid://c2xatgja6mru1" path="res://main_menu_wood_bottom_v2.png" id="3_jix8l"]
-[ext_resource type="FontFile" uid="uid://c6eqe1y3q1v3e" path="res://Super Midnight.ttf" id="4_jix8l"]
+[ext_resource type="Texture2D" uid="uid://0uakom0umvfr" path="res://UI/Sprites/main_menu_backround_v5.png" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://yp87uv6eelm8" path="res://UI/Sprites/main_menu_wood_top_v2.png" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://djls3r004osj3" path="res://UI/Sprites/main_menu_wood_bottom_v2.png" id="3_jix8l"]
+[ext_resource type="FontFile" uid="uid://c45elnnrb0tn2" path="res://UI/Sprites/Super Midnight.ttf" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_06t4h")
