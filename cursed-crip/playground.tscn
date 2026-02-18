@@ -1,33 +1,13 @@
 [gd_scene format=3 uid="uid://c0ubt6vnx2v0v"]
 
 [ext_resource type="Script" uid="uid://d2f75irfp8jmg" path="res://playground.gd" id="1_h1jm5"]
-[ext_resource type="PackedScene" uid="uid://8doq2asyqqqr" path="res://Level/Bathroom/bathroom-01.tscn" id="1_rp2qx"]
-[ext_resource type="PackedScene" uid="uid://cq3skiqyudcha" path="res://Items/Scenes/heart.tscn" id="5_l1jrj"]
-[ext_resource type="PackedScene" uid="uid://dbe27qvemki55" path="res://Enemies/Scenes/EnemySpwan.tscn" id="6_4bqqs"]
-[ext_resource type="PackedScene" uid="uid://bn3qiwctllft5" path="res://Items/Scenes/Slingshot.tscn" id="7_v7dth"]
-[ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
-[ext_resource type="PackedScene" uid="uid://c0lhqpc6n56tp" path="res://Items/Scenes/projectile_splitter.tscn" id="8_pi42a"]
-[ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Level/Darkness.tscn" id="8_v7dth"]
-[ext_resource type="PackedScene" uid="uid://q4v545sewp2d" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
-[ext_resource type="PackedScene" uid="uid://vvj8fjn8s11s" path="res://Player/Scenes/Player.tscn" id="10_h1jm5"]
-[ext_resource type="PackedScene" uid="uid://y3tb02ebvcle" path="res://Items/Scenes/homing_rock_item.tscn" id="11_pio1y"]
+[ext_resource type="PackedScene" uid="uid://cf71mif2kfhcp" path="res://Levels/Crib/crib-01.tscn" id="2_m8u5f"]
+[ext_resource type="PackedScene" uid="uid://biu2prur6qjqo" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
 
 [node name="Playground" type="Node2D" unique_id=1305490607]
 position = Vector2(2, -3)
 script = ExtResource("1_h1jm5")
 
-[node name="Bathroom01" parent="." unique_id=479394018 instance=ExtResource("2_m8u5f")]
+[node name="Cripb01" parent="." unique_id=105545023 instance=ExtResource("2_m8u5f")]
 
 [node name="HUD" parent="." unique_id=821862012 instance=ExtResource("9_pi42a")]
-
-[node name="Player" parent="." unique_id=841666979 groups=["player"] instance=ExtResource("10_h1jm5")]
-position = Vector2(1653, 963)
-scale = Vector2(3.5, 3.5)
-collision_mask = 18
-
-[node name="Slingshot" parent="." unique_id=1226093021 instance=ExtResource("7_v7dth")]
-position = Vector2(1258, 739)
-scale = Vector2(3, 3)
-
-[node name="HomingRockItem" parent="." unique_id=1481757751 instance=ExtResource("11_pio1y")]
-position = Vector2(1400, 925)
