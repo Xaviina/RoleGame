@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bu0xyo5hv8bje" path="res://Items/Scenes/rock.tscn" id="2_yiwjk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jbgq0"]
-radius = 11.0
 
 [node name="Slingshot" type="Area2D" unique_id=1226093021]
 script = ExtResource("1_ouvrw")

@@ -1,15 +1,16 @@
 extends Node2D
 
 @export var bullet_scene: PackedScene 
-@export var fire_rate: float = 1.0
+@export var fire_rate: float = 2.0
 @export var splitter_count: int 
+@export var homing_item_count: int
 @export var is_homing_unlocked: bool = false
 var can_fire: bool = true
 
 func fire():
 	if not can_fire or bullet_scene == null:
 		return
-
+	start_cooldown()
 	var shot_count = 1 + (splitter_count * 2)
 	var spread_angle = deg_to_rad(15) # Total spread of 15 degrees between bullets
 
@@ -34,19 +35,19 @@ func fire():
 		bullet.direction = Vector2.from_angle(final_angle)
 		bullet.rotation = final_angle
 		
-		get_tree().root.add_child(bullet)
 		
-		if is_homing_unlocked and "is_homing" in bullet:
+		if is_homing_unlocked:
 			bullet.is_homing = true
 			bullet.modulate = Color(1.419, 0.236, 0.009, 1.0)
-	start_cooldown()
-
+		
+		get_tree().root.add_child(bullet)
 func start_cooldown():
 	can_fire = false
 	await get_tree().create_timer(fire_rate).timeout
 	can_fire = true
 func add_splitter():
 	splitter_count += 1
-	
+func add_homing_item():
+	homing_item_count += 1
 func unlock_homing():
 	is_homing_unlocked = true

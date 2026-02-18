@@ -9,6 +9,7 @@ signal health_changed(new_health: int)
 signal purseContents_changed(new_total: int)
 signal splitters_changed(new_total: int)
 
+var homing_item_count: int = 0
 var splitter_item_count: int = 0
 var purse: int = 0
 
@@ -60,8 +61,6 @@ func update_animations(direction: Vector2):
 		
 #function for pick up
 func pick_up(type: String, item_name: String):
-	if item_name == "Homing Rock":
-		$Weapon.unlock_homing()
 	if item_name == "Heart":
 		health += 1
 	if item_name == "Coin":
@@ -78,3 +77,9 @@ func pick_up(type: String, item_name: String):
 			splitters_changed.emit(splitter_item_count)
 			if weapon_node.has_method("add_splitter"):
 				weapon_node.add_splitter()
+		if item_name == "Homing Rock":
+			weapon_node.unlock_homing()
+			homing_item_count += 1
+			splitters_changed.emit(homing_item_count)
+			if weapon_node.has_method("add_homing_item"):
+				weapon_node.add_homing_item()
