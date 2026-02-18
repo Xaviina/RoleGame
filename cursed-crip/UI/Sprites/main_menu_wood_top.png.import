@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd6h2tojnx1lk"
-path="res://.godot/imported/slingshot.png-f71132490d5a9030bec250d623530885.ctex"
+uid="uid://csw616mf1yfyt"
+path="res://.godot/imported/main_menu_wood_top.png-75f07e8d13b468cb18668c0e492650fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slingshot.png"
-dest_files=["res://.godot/imported/slingshot.png-f71132490d5a9030bec250d623530885.ctex"]
+source_file="res://UI/Sprites/main_menu_wood_top.png"
+dest_files=["res://.godot/imported/main_menu_wood_top.png-75f07e8d13b468cb18668c0e492650fe.ctex"]
 
 [params]
 

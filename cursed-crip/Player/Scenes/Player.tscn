@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://vvj8fjn8s11s"]
+[gd_scene format=3 uid="uid://dnshgd0377ego"]
 
 [ext_resource type="Script" uid="uid://bx7h7tocqyybm" path="res://Player/Scrips/Player.gd" id="1_7jgbj"]
 [ext_resource type="Texture2D" uid="uid://d12vao0kvnucv" path="res://Player/Sprites/run-to-the-right.png" id="2_ejah4"]
@@ -288,7 +288,8 @@ fill = 1
 fill_from = Vector2(0.50085473, 0.50085473)
 fill_to = Vector2(0.85641026, 0.14188035)
 
-[node name="Player" type="CharacterBody2D" unique_id=841666979]
+[node name="Player" type="CharacterBody2D" unique_id=841666979 groups=["player"]]
+scale = Vector2(3.5, 3.5)
 collision_mask = 19
 script = ExtResource("1_7jgbj")
 

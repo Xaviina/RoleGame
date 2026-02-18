@@ -16,25 +16,7 @@
 position = Vector2(2, -3)
 script = ExtResource("1_h1jm5")
 
-[node name="Bathroom01" parent="." unique_id=467761442 instance=ExtResource("1_rp2qx")]
-position = Vector2(190, 127)
-scale = Vector2(4, 4)
-
-[node name="Heart" parent="." unique_id=1586926512 instance=ExtResource("5_l1jrj")]
-position = Vector2(1015, 404)
-scale = Vector2(2, 2)
-
-[node name="EnemySpwan" parent="." unique_id=636385555 instance=ExtResource("6_4bqqs")]
-
-[node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=1740170513 instance=ExtResource("7_ynsuh")]
-position = Vector2(307, 449)
-
-[node name="Darkness" parent="." unique_id=1064633370 instance=ExtResource("8_v7dth")]
-color = Color(0.013313601, 0.017181924, 0.033644296, 1)
-
-[node name="Projectile Splitter" parent="." unique_id=1246748690 instance=ExtResource("8_pi42a")]
-position = Vector2(1548, 555)
-scale = Vector2(4, 4)
+[node name="Bathroom01" parent="." unique_id=479394018 instance=ExtResource("2_m8u5f")]
 
 [node name="HUD" parent="." unique_id=821862012 instance=ExtResource("9_pi42a")]
 
