@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bn3qiwctllft5"]
 
 [ext_resource type="Script" uid="uid://wumnu3lwr8gn" path="res://Items/Scripts/Slingshot.gd" id="1_ouvrw"]
-[ext_resource type="Texture2D" uid="uid://dd6h2tojnx1lk" path="res://slingshot.png" id="2_jbgq0"]
+[ext_resource type="Texture2D" uid="uid://bk62gq8ynd7n0" path="res://Items/Weapons/Sprites/slingshot.png" id="2_jbgq0"]
 [ext_resource type="PackedScene" uid="uid://bu0xyo5hv8bje" path="res://Items/Scenes/rock.tscn" id="2_yiwjk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jbgq0"]

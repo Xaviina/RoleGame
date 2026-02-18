@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://duqef2uby5gsm"]
 
-[ext_resource type="Script" uid="uid://c87hnjbi3gc1k" path="res://Main Menu/Scripts/menu_button.gd" id="1_n4tde"]
-[ext_resource type="Texture2D" uid="uid://c62d8ji6h2evs" path="res://Main Menu/Sprites/main_menu_wood_top_v2.png" id="2_vxja4"]
-[ext_resource type="FontFile" uid="uid://dt6q0poa6qvvn" path="res://Main Menu/Sprites/LuckiestGuy-Regular.ttf" id="3_vxja4"]
+[ext_resource type="Script" uid="uid://c87hnjbi3gc1k" path="res://UI/Scripts/menu_button.gd" id="1_n4tde"]
+[ext_resource type="Texture2D" uid="uid://yp87uv6eelm8" path="res://UI/Sprites/main_menu_wood_top_v2.png" id="2_vxja4"]
+[ext_resource type="FontFile" uid="uid://bwmn675p586q8" path="res://UI/Sprites/LuckiestGuy-Regular.ttf" id="3_vxja4"]
 
 [node name="VBoxContainer" type="VBoxContainer" unique_id=1003473590]
 anchors_preset = 8

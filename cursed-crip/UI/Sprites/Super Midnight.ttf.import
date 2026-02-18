@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c45elnnrb0tn2"
-path="res://.godot/imported/Super Midnight.ttf-732e32b882cf56fa195235ed95d5391a.fontdata"
+path="res://.godot/imported/Super Midnight.ttf-0ff7e34cd1931540f4fd5dbd8bf0429d.fontdata"
 
 [deps]
 
-source_file="res://Super Midnight.ttf"
-dest_files=["res://.godot/imported/Super Midnight.ttf-732e32b882cf56fa195235ed95d5391a.fontdata"]
+source_file="res://UI/Sprites/Super Midnight.ttf"
+dest_files=["res://.godot/imported/Super Midnight.ttf-0ff7e34cd1931540f4fd5dbd8bf0429d.fontdata"]
 
 [params]
 

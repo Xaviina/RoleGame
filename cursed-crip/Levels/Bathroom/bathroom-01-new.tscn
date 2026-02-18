@@ -29,15 +29,15 @@ offset_bottom = 1086.4379
 color = Color(0, 0, 0, 1)
 
 [node name="PlayerSpawn" parent="." unique_id=1617155080 instance=ExtResource("4_y46rl")]
-position = Vector2(1609, 941)
+position = Vector2(1631, 940)
 
 [node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("5_je2xm")]
-visible = false
 
 [node name="EnemySpwan" parent="." unique_id=426365184 instance=ExtResource("7_y46rl")]
 
 [node name="LevelTransition" parent="." unique_id=2019880764 instance=ExtResource("8_t26mh")]
-position = Vector2(1631, 1077)
+position = Vector2(1632.0001, 1085)
 scale = Vector2(1.1256362, 0.4428756)
-level = "<null>"
+level = "uid://cf71mif2kfhcp"
+size = 1
 side = 3

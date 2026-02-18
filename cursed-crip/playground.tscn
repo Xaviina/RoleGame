@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2f75irfp8jmg" path="res://playground.gd" id="1_h1jm5"]
 [ext_resource type="PackedScene" uid="uid://phvvarw0w3ah" path="res://Levels/Bathroom/bathroom-01-new.tscn" id="2_m8u5f"]
-[ext_resource type="PackedScene" uid="uid://deqkrogiji4t0" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
+[ext_resource type="PackedScene" uid="uid://q4v545sewp2d" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
 
 [node name="Playground" type="Node2D" unique_id=1305490607]
 position = Vector2(2, -3)

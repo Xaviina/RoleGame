@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://cq3o7geibq61b" path="res://Levels/Scripts/level_tansition.gd" id="1_cut12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghk5r"]
-size = Vector2(160, 160)
+resource_local_to_scene = true
+size = Vector2(160, 16)
 
 [node name="LevelTransition" type="Area2D" unique_id=2019880764]
 collision_layer = 0
