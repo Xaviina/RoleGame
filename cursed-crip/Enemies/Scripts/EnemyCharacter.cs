@@ -6,6 +6,9 @@ public partial class EnemyCharacter : CharacterBody2D
 	 [Export] public float speed = 50f;
 	 [Export] public float huntRange = 200f;
 	 [Export] public float attackRange = 50f;
+	
+	[Signal]
+	public delegate void _on_detection_area_body_entered(Node2D body)
 
 	private Vector2 _direction = Vector2.Right;
 	private RandomNumberGenerator _rng = new RandomNumberGenerator();

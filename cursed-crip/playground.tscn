@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b26cm85cimlx0" path="res://Enemies/Scenes/EnemyCharacter.tscn" id="7_ynsuh"]
 [ext_resource type="PackedScene" uid="uid://c0lhqpc6n56tp" path="res://Items/Scenes/projectile_splitter.tscn" id="8_pi42a"]
 [ext_resource type="PackedScene" uid="uid://q06rh7rud0vm" path="res://Level/Darkness.tscn" id="8_v7dth"]
-[ext_resource type="PackedScene" uid="uid://q4v545sewp2d" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
+[ext_resource type="PackedScene" uid="uid://biu2prur6qjqo" path="res://UI/Scenes/hud.tscn" id="9_pi42a"]
 [ext_resource type="PackedScene" uid="uid://vvj8fjn8s11s" path="res://Player/Scenes/Player.tscn" id="10_h1jm5"]
 [ext_resource type="PackedScene" uid="uid://y3tb02ebvcle" path="res://Items/Scenes/homing_rock_item.tscn" id="11_pio1y"]
 
@@ -26,8 +26,7 @@ scale = Vector2(2, 2)
 
 [node name="EnemySpwan" parent="." unique_id=636385555 instance=ExtResource("6_4bqqs")]
 
-[node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=1740170513 instance=ExtResource("7_ynsuh")]
-position = Vector2(307, 449)
+[node name="EnemyRabbit2D" parent="EnemySpwan" unique_id=769613302 instance=ExtResource("7_ynsuh")]
 
 [node name="Darkness" parent="." unique_id=1064633370 instance=ExtResource("8_v7dth")]
 color = Color(0.013313601, 0.017181924, 0.033644296, 1)
