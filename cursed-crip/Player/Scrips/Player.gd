@@ -9,6 +9,8 @@ signal health_changed(new_health: int)
 signal purseContents_changed(new_total: int)
 signal splitters_changed(new_total: int)
 
+var is_dead: bool = false
+
 var homing_item_count: int = 0
 var splitter_item_count: int = 0
 var purse: int = 0
@@ -21,6 +23,7 @@ var health: int = 3:
 const SPEED = 300.0  # Bewegungsgeschwindigkeit
 
 func _physics_process(_delta: float) -> void:
+	if is_dead: return # Stop all movement and input if dead
 	get_input()
 	move_and_slide()
 	
@@ -46,7 +49,14 @@ func get_input():
 	# Animationen und Flipping
 	update_animations(direction)
 
+func take_damage(amount: int):
+	health -= amount
+	print("Took ", amount, " damage. Current Health: ", health)
+	if health <= 0:
+		death()
+
 func update_animations(direction: Vector2):
+	if is_dead: return
 	if direction.x > 0:
 		$AnimatedSprite2D.play("run_left_to_right")
 		$AnimatedSprite2D.flip_h = false
@@ -80,6 +90,10 @@ func pick_up(type: String, item_name: String):
 		if item_name == "Homing Rock":
 			weapon_node.unlock_homing()
 			homing_item_count += 1
-			splitters_changed.emit(homing_item_count)
+			#splitters_changed.emit(homing_item_count)
 			if weapon_node.has_method("add_homing_item"):
 				weapon_node.add_homing_item()
+func death():
+	if is_dead: return # Prevent death from triggering multiple times
+	is_dead = true
+	$AnimatedSprite2D.play("death")
