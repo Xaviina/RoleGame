@@ -6,8 +6,12 @@
 [ext_resource type="FontFile" uid="uid://c6eqe1y3q1v3e" path="res://Super Midnight.ttf" id="4_jix8l"]
 [ext_resource type="Texture2D" uid="uid://cenpi2nsapelh" path="res://UI/images/figuren/jackbox.png" id="5_8qtwp"]
 [ext_resource type="Texture2D" uid="uid://dupmq7peglmfc" path="res://UI/images/figuren/Bear.png" id="6_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://dmpwcfgfosk8l" path="res://UI/images/figuren/SabberMouth.png" id="7_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://1r4fcmv0vjgc" path="res://UI/images/figuren/Boy.png" id="7_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://u4ps5lwjxcbq" path="res://UI/images/figuren/Bunny.png" id="8_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://khnrj6j7um44" path="res://UI/images/figuren/SabberDrop.png" id="8_j5v2v"]
+[ext_resource type="Texture2D" uid="uid://dhu6qu7h6p1ob" path="res://UI/images/figuren/Pfütze.png" id="9_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://cyquudjsqokw1" path="res://UI/images/figuren/BunnyEye.png" id="12_j5v2v"]
 
 [sub_resource type="Animation" id="Animation_nlkkf"]
 length = 0.8
@@ -97,6 +101,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mouthmaker/Drool_Fall:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mouthmaker/Drool_Fall:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-24.804218, 32.273956)]
+}
 
 [sub_resource type="Animation" id="Animation_dy7ct"]
 resource_name = "breath_idle"
@@ -124,13 +152,137 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.6, 1.2, 1.8, 2.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [0.0, 0.010471975511966373, 0.0, 0.010471975511966373, 0.0038992006]
+"values": [0.0, 0.01047197551196637, 0.0, 0.01047197551196637, 0.0038992006]
+}
+
+[sub_resource type="Animation" id="Animation_0o4t1"]
+resource_name = "drop_fall"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouthmaker/Drool_Fall:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9, 2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mouthmaker/Drool_Fall:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9, 2.1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-24.804218, 32.273956), Vector2(-24.804, 60), Vector2(-24.804218, 32.273956), Vector2(-24.804218, 32.273956)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0o4t1"]
 _data = {
 &"RESET": SubResource("Animation_8qtwp"),
-&"breath_idle": SubResource("Animation_dy7ct")
+&"breath_idle": SubResource("Animation_dy7ct"),
+&"drop_fall": SubResource("Animation_0o4t1")
+}
+
+[sub_resource type="Animation" id="Animation_cm266"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(957, 536.53125)]
+}
+
+[sub_resource type="Animation" id="Animation_j5v2v"]
+resource_name = "idle_shiver"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.55, 1.6, 1.65, 1.7, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(957, 536.53125), Vector2(957, 536.53125), Vector2(956, 536.531), Vector2(958, 536.531), Vector2(956, 536.531), Vector2(957, 536.53125), Vector2(957, 536.53125)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iotk1"]
+_data = {
+&"RESET": SubResource("Animation_cm266"),
+&"idle_shiver": SubResource("Animation_j5v2v")
+}
+
+[sub_resource type="Animation" id="Animation_iotk1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../BunnyEye:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../BunnyEye:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.066975914, 0.07617187)]
+}
+
+[sub_resource type="Animation" id="Animation_w44g7"]
+resource_name = "idle_eye"
+length = 2.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../BunnyEye:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.78431374), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../BunnyEye:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.066975914, 0.07617187), Vector2(0.079, 0.09), Vector2(0.066975914, 0.07617187)]
 }
 
 [sub_resource type="Animation" id="Animation_0k4wn"]
@@ -138,6 +290,8 @@ resource_name = "idle_hase"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j5v2v"]
 _data = {
+&"RESET": SubResource("Animation_iotk1"),
+&"idle_eye": SubResource("Animation_w44g7"),
 &"idle_hase": SubResource("Animation_0k4wn")
 }
 
@@ -159,6 +313,8 @@ grow_vertical = 2
 
 [node name="Background" parent="UI" unique_id=82746682 instance=ExtResource("1_7vrkn")]
 layout_mode = 1
+offset_top = 2.0
+offset_bottom = 2.0
 
 [node name="VBoxContainer" parent="UI" unique_id=1003473590 instance=ExtResource("1_glbon")]
 layout_mode = 1
@@ -184,7 +340,7 @@ offset_top = 25.0
 offset_right = 1245.0
 offset_bottom = 202.0
 rotation = -0.013962634
-theme_override_colors/font_color = Color(0.44705883, 1, 0.22745098, 1)
+theme_override_colors/font_color = Color(0.14117648, 0.41960785, 0.19215687, 1)
 theme_override_colors/font_shadow_color = Color(0.3529412, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.101960786, 0.05882353, 0.05882353, 1)
 theme_override_constants/shadow_offset_x = 4
@@ -203,7 +359,7 @@ offset_right = 1043.0
 offset_bottom = 309.0
 rotation = 0.013962634
 scale = Vector2(1.2, 1.2)
-theme_override_colors/font_color = Color(1, 0.30980393, 0.6392157, 1)
+theme_override_colors/font_color = Color(0.6117647, 0.23137255, 0.54901963, 1)
 theme_override_colors/font_shadow_color = Color(0.3529412, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.101960786, 0.05882353, 0.05882353, 1)
 theme_override_constants/shadow_offset_x = 4
@@ -236,12 +392,38 @@ texture = ExtResource("6_dy7ct")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Monsters/Bear" unique_id=431577130]
 libraries/ = SubResource("AnimationLibrary_0o4t1")
+autoplay = &"drop_fall"
+
+[node name="Mouthmaker" type="Marker2D" parent="Monsters/Bear" unique_id=815550993]
+position = Vector2(61.113804, -3.673285)
+
+[node name="Drool_Hang" type="Sprite2D" parent="Monsters/Bear/Mouthmaker" unique_id=1724313182]
+z_index = 1
+position = Vector2(-27.050402, 9.334889)
+scale = Vector2(0.026760977, 0.047075182)
+texture = ExtResource("7_0k4wn")
+
+[node name="Drool_Fall" type="Sprite2D" parent="Monsters/Bear/Mouthmaker" unique_id=2063317304]
+z_index = 1
+position = Vector2(-24.804218, 32.273956)
+scale = Vector2(0.040450145, 0.04757462)
+texture = ExtResource("8_j5v2v")
+
+[node name="pfütze" type="Sprite2D" parent="Monsters/Bear/Mouthmaker" unique_id=648409632]
+z_index = -2
+position = Vector2(-23.042908, 81.527466)
+scale = Vector2(0.16698264, 0.18675698)
+texture = ExtResource("9_0k4wn")
 
 [node name="Boy" type="Sprite2D" parent="Monsters" unique_id=1198047573]
 z_index = 3
 position = Vector2(957, 536.53125)
 scale = Vector2(0.99271643, 0.6786499)
 texture = ExtResource("7_0o4t1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monsters/Boy" unique_id=1689997518]
+libraries/ = SubResource("AnimationLibrary_iotk1")
+autoplay = &"idle_shiver"
 
 [node name="Bunny" type="Sprite2D" parent="Monsters" unique_id=339440372]
 z_index = 2
@@ -251,3 +433,10 @@ texture = ExtResource("8_0k4wn")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Monsters/Bunny" unique_id=167965397]
 libraries/ = SubResource("AnimationLibrary_j5v2v")
+autoplay = &"idle_eye"
+
+[node name="BunnyEye" type="Sprite2D" parent="." unique_id=1687301719]
+z_index = 2
+position = Vector2(1428.3102, 315.87222)
+scale = Vector2(0.066975914, 0.07617187)
+texture = ExtResource("12_j5v2v")
