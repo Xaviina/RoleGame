@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://duqef2uby5gsm"]
+
+[ext_resource type="Script" uid="uid://c87hnjbi3gc1k" path="res://UI/Scripts/menu_button.gd" id="1_n4tde"]
+[ext_resource type="Texture2D" uid="uid://yp87uv6eelm8" path="res://UI/Sprites/main_menu_wood_top_v2.png" id="2_vxja4"]
+[ext_resource type="FontFile" uid="uid://bwmn675p586q8" path="res://UI/Sprites/LuckiestGuy-Regular.ttf" id="3_vxja4"]
+
+[node name="VBoxContainer" type="VBoxContainer" unique_id=1003473590]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = -12
+alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=450794775]
+custom_minimum_size = Vector2(550, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+flat = true
+script = ExtResource("1_n4tde")
+
+[node name="Overlay" type="TextureRect" parent="Button" unique_id=49365408]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Button/Overlay" unique_id=895760983]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vxja4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Button" unique_id=1859337551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.24705882, 0.91764706, 0.24705882, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_vxja4")
+theme_override_font_sizes/font_size = 48
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1185646813]
+custom_minimum_size = Vector2(550, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+flat = true
+script = ExtResource("1_n4tde")
+
+[node name="Overlay" type="TextureRect" parent="Button2" unique_id=531658342]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Button2/Overlay" unique_id=2047674143]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vxja4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Button2" unique_id=1519507832]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7882353, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_vxja4")
+theme_override_font_sizes/font_size = 48
+text = "Load Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button3" type="Button" parent="." unique_id=139376192]
+custom_minimum_size = Vector2(550, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+flat = true
+script = ExtResource("1_n4tde")
+
+[node name="Overlay" type="TextureRect" parent="Button3" unique_id=1514915817]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Button3/Overlay" unique_id=1358530703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vxja4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Button3" unique_id=2144409218]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9019608, 0.41960785, 0.77254903, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_vxja4")
+theme_override_font_sizes/font_size = 48
+text = "settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button4" type="Button" parent="." unique_id=674393101]
+custom_minimum_size = Vector2(550, 90)
+layout_mode = 2
+size_flags_horizontal = 4
+flat = true
+script = ExtResource("1_n4tde")
+
+[node name="Overlay" type="TextureRect" parent="Button4" unique_id=667898110]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vxja4")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="Button4/Overlay" unique_id=1510129495]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vxja4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Button4" unique_id=1906839643]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.9019608, 0.23137255, 0.23137255, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_vxja4")
+theme_override_font_sizes/font_size = 48
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Button" to="Button" method="_on_button_down"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
+[connection signal="button_down" from="Button2" to="Button2" method="_on_button_down"]
+[connection signal="button_up" from="Button2" to="Button2" method="_on_button_up"]
+[connection signal="mouse_entered" from="Button2" to="Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="Button2" method="_on_mouse_exited"]
+[connection signal="button_down" from="Button3" to="Button3" method="_on_button_down"]
+[connection signal="button_up" from="Button3" to="Button3" method="_on_button_up"]
+[connection signal="mouse_entered" from="Button3" to="Button3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button3" to="Button3" method="_on_mouse_exited"]
+[connection signal="button_down" from="Button4" to="Button4" method="_on_button_down"]
+[connection signal="button_up" from="Button4" to="Button4" method="_on_button_up"]
+[connection signal="mouse_entered" from="Button4" to="Button4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button4" to="Button4" method="_on_mouse_exited"]
