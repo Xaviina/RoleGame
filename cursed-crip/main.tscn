@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://kbvm24tn21uo"]
+
+[ext_resource type="Script" uid="uid://eodmd5s230c3" path="res://game_controller.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://deqkrogiji4t0" path="res://UI/Scenes/hud.tscn" id="3_lquwl"]
+
+[node name="Main" type="Node2D" unique_id=1368039196]
+
+[node name="GameController" type="Node2D" parent="." unique_id=385773282]
+script = ExtResource("2_0xm2m")
+
+[node name="RoomContainer" type="Node2D" parent="." unique_id=1067657751]
+
+[node name="HUD" parent="." unique_id=821862012 instance=ExtResource("3_lquwl")]

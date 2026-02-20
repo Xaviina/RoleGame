@@ -14,6 +14,7 @@ func spawn_player(spawn_point: Marker2D):
 
 	# neuen Player erstellen
 	player = PLAYER_SCENE.instantiate()
+	PlayerManager.player = player
 
 	# direkt in die aktuelle Szene einfügen
 	get_tree().current_scene.call_deferred("add_child", player)

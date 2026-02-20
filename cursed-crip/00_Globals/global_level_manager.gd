@@ -1,52 +1,43 @@
 extends Node
 
-signal level_load_started
-signal level_loaded
-signal tilemap_bounds_changed (bounds:Array[Vector2])
-
-var current_tilemap_bounds : Array[Vector2]
-var target_transition : String
-var position_offset : Vector2
-
 var transition_locked := false
-var transition_lock_time := 1.5   # Sekunden (einstellbar)
+var transition_lock_time := 1.5
 
-func change_tilemap_bounds(bounds:Array[Vector2]) -> void:
-	current_tilemap_bounds = bounds
-	tilemap_bounds_changed.emit(bounds)
-
-
-func load_new_level(
-		level_path: String,
-		_target_transition : String,
-		_posotion_offset: Vector2
-) -> void:
-	
+func load_new_level(level_scene: PackedScene, spawn_name: String) -> void:
 	if transition_locked:
 		return
-		
 	transition_locked = true
-	
 	get_tree().paused = true
-	target_transition = _target_transition
-	position_offset = _posotion_offset
-	
-	level_load_started.emit()
-	
-	await get_tree().process_frame # level transition
-	
-	get_tree().change_scene_to_file(level_path)
-	
-	await get_tree().process_frame # level transition
-	
-	get_tree().paused = false
-	
+
+	var main = get_tree().root.get_node("Main")
+
+	# Node-Name aus PackedScene ermitteln
+	var node_name = level_scene.resource_path.get_file().get_basename()
+	var target_level = main.level_container.get_node_or_null(node_name)
+
+	if target_level == null:
+		# Instanzieren, falls Level noch nicht im LevelContainer
+		target_level = level_scene.instantiate()
+		target_level.name = node_name
+		main.level_container.add_child(target_level)
+
+	# Alle Levels deaktivieren
+	for child in main.level_container.get_children():
+		main._set_level_active(child, false)
+
+	# Ziel-Level aktivieren
+	main._set_level_active(target_level, true)
+
+	# Spieler an Spawnpunkt setzen
+	if main.player:
+		var spawn = target_level.get_node_or_null(spawn_name)
+		if spawn:
+			main.player.global_position = spawn.global_position
+
+	# Player-Signale aktualisieren
+	main._setup_player_signals()
+
 	await get_tree().process_frame
-	
-	level_loaded.emit()
-	
-	 #  Cooldown starten
+	get_tree().paused = false
 	await get_tree().create_timer(transition_lock_time).timeout
 	transition_locked = false
-	
-	pass

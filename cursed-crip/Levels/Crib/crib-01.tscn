@@ -11,7 +11,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rsj41"]
 shader = ExtResource("2_i36qc")
 
-[node name="Cripb01" type="Node2D" unique_id=105545023]
+[node name="Crib01" type="Node2D" unique_id=105545023]
 script = ExtResource("1_pcaa0")
 
 [node name="TileSets-floor" parent="." unique_id=1881788443 instance=ExtResource("1_hbclf")]
@@ -35,15 +35,17 @@ offset_bottom = 368.40057
 color = Color(0, 0, 0, 1)
 
 [node name="Darkness" parent="." unique_id=941538647 instance=ExtResource("3_rsj41")]
-
-[node name="PlayerSpawn" parent="." unique_id=169725173 instance=ExtResource("5_60fc3")]
-position = Vector2(956, 919)
+visible = false
 
 [node name="EnemySpwan" parent="." unique_id=426365184 instance=ExtResource("6_mxvt3")]
 
 [node name="LevelTransition" parent="." unique_id=2019880764 instance=ExtResource("7_dbdx2")]
 position = Vector2(960, 1078)
 scale = Vector2(1.3644503, 0.47615913)
-level = "uid://phvvarw0w3ah"
+level_scene_path = "uid://phvvarw0w3ah"
+target_spawn = "LevelTransition"
 size = 1
 side = 3
+
+[node name="PlayerSpawn" parent="." unique_id=169725173 instance=ExtResource("5_60fc3")]
+position = Vector2(956, 919)

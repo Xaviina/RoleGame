@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://biu2prur6qjqo"]
+[gd_scene format=3 uid="uid://deqkrogiji4t0"]
 
-[ext_resource type="Script" uid="uid://dcydodiugtmxg" path="res://Items/Scripts/heart_container.gd" id="1_t2p4a"]
+[ext_resource type="Script" uid="uid://dcydodiugtmxg" path="res://UI/Scripts/heart_container.gd" id="1_t2p4a"]
 [ext_resource type="Texture2D" uid="uid://bmv5bpku1kfi2" path="res://Items/Sprites/heart pixel art/heart pixel art 16x16.png" id="2_6hjip"]
 [ext_resource type="Texture2D" uid="uid://c5ob35lvgwcj1" path="res://Items/Sprites/01coin.png" id="3_m34v3"]
-[ext_resource type="FontFile" uid="uid://c45elnnrb0tn2" path="res://UI/Sprites/Super Midnight.ttf" id="4_6hjip"]
+[ext_resource type="FontFile" uid="uid://cwuqlg6yqmmtg" path="res://UI/Sprites/Super Midnight.ttf" id="4_6hjip"]
 [ext_resource type="Texture2D" uid="uid://dc8r2ctfem1ni" path="res://Items/Sprites/Bild (1).png" id="4_hveoy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t2p4a"]
