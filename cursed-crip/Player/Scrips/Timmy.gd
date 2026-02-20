@@ -44,7 +44,10 @@ func update_animations(direction: Vector2):
 		$AnimatedSprite2D.flip_h = true
 	elif direction.y != 0:
 		# Spielt Lauf-Animation auch bei vertikaler Bewegung
-		$AnimatedSprite2D.play("run_left_to_right")	else:
+		$AnimatedSprite2D.play("run_left_to_right")	
+	else:
+			
+			
 		$AnimatedSprite2D.play("stand")
 		
 # Funktion für das Aufheben von Items und Waffen
