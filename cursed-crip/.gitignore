@@ -1,3 +1,37 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+*.tmp   
+*.import
+
+# Exports
+export/
+exports/
+build/
+builds/
+dist/
+
+# DotNet 
+.vs/
+bin/
+obj/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# DB
+*.db
+*.sqlite
+*.sqlite3
+*.db-shm
+*.db-wal
+*.sqlite-shm
+*.sqlite-wal
